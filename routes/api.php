@@ -22,4 +22,19 @@ Route::group(['middleware' => ['api', 'checkPassword', 'changeLanguage'], 'names
     Route::post('get-category-byID', 'CategoryController@getCategoryByID');
 
     Route::post('change-category-status', 'CategoryController@changeCategoryStatus');
+
+
+    //for admin login
+    Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+
+        Route::post('login', 'AuthController@login');
+    
+    });
+    
+});
+
+
+Route::group(['middleware' => ['api', 'checkPassword', 'changeLanguage', 'CheckAdminToken:api-admin'], 'namespace' => 'Api'], function(){
+
+  
 });

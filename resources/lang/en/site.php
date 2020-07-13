@@ -3,5 +3,7 @@
 return [
 'notfound' => 'Not found',
 'updated_successfully' => 'Updated Successfully!',
-'somthingWrong' => 'ٍSomthing is wrong!'
+'somthingWrong' => 'ٍSomthing is wrong!',
+'Unauthenticated' => 'Unauthenticated'
+
 ];
